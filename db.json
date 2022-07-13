@@ -1,0 +1,70 @@
+{
+     "users": [
+        {
+            "topic": "How to build with table sorting in reporting dashboard",
+            "activeMembers": "42",
+            "status":"locked",
+            "upvotes":"92",
+            "id":1
+        },
+        {
+            "topic": "How to use react-table for leaderboard",
+            "activeMembers": "29",
+            "status":"resolved",
+            "upvotes":"35",
+            "id":2
+        },
+        {
+            "topic": "How to use react-table for leaderboard",
+            "activeMembers": "15",
+            "status":"locked",
+            "upvotes":"42",
+            "id":3
+        },
+        {
+            "topic": "How to use table sorting in report dashboard",
+            "activeMembers": "41",
+            "status":"locked",
+            "upvotes":"23",
+            "id":4
+        },
+        {
+            "topic": "Issues with global filter for BI solution",
+            "activeMembers": "39",
+            "status":"resolved",
+            "upvotes":"68",
+            "id":5
+        },
+        {
+            "topic": "Trouble integrating expanding rows in reporting dashboard",
+            "activeMembers": "25",
+            "status":"open",
+            "upvotes":"55",
+            "id":6
+        },
+        {
+            "topic": "Trouble integrating react table for status aggregation",
+            "activeMembers": "20",
+            "status":"open",
+            "upvotes":"18",
+            "id":7
+        },
+        {
+            "topic": "Trouble integrating table sorting in ecommerce app",
+            "activeMembers": "17",
+            "status":"locked",
+            "upvotes":"48",
+            "id":8
+        },
+        {
+            "topic": "Trouble integrating table sorting in ecommerce app",
+            "activeMembers": "29",
+            "status":"open",
+            "upvotes":"42",
+            "id":9
+        }
+        
+        
+     ]
+
+}
