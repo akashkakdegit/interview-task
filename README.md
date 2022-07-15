@@ -94,8 +94,7 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
  ``  useEffect(() => {
                     loadUsersData();
                     }, []);
-
-         const loadUsersData = async () => {
+        const loadUsersData = async () => {
          return await axios.get("http://localhost:4000/users")
           .then((response) => setData(response.data))
           .catch((err) => console.log(err));
