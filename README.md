@@ -12,7 +12,7 @@ Basic CSS properties for styling and designing for the web application.
 #### Approach:
 
 Set up the development environment, install all the required dependencies.
-Use CSS for stylings of the component file and import the CSS file in the component file.
+Use CSS for stylings.
 Create the data.json file in src to store all data.
 
 Below is the step by the step implementation of the above approach:
