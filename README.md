@@ -1,70 +1,220 @@
-# Getting Started with Create React App
+In this project, we will create a searching, sorting in ascending and sorting in descending operation in data contains in coloumn by using ReactJs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### Pre-requisites:
 
-In the project directory, you can run:
+Basic and advanced JavaScript such as functions, types of variables, async and await etc.
+ReactJS development setup for web development.
+ReactJS Hooks such as useState Hook and useEffect Hook.
+Basic CSS properties for styling and designing for the web application.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Approach:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Set up the development environment, install all the required dependencies.
+Use CSS for stylings of the component file and import the CSS file in the component file.
+Create the data.json file in src to store all data.
 
-### `npm test`
+Below is the step by the step implementation of the above approach:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Step 1:** Create a React application using the following command:
+        npx create-react-app interview-task
 
-### `npm run build`
+**Step 2:** After creating our project folder i.e.interview task, move to it using the following command:
+        cd interview task
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Project Structure:** It will look like the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- node_modules
+- public
+- src
+  - App.css
+  - App.js
+  - App.test.js
+  - index.css
+  - index.js
+  - logo.svg
+  - setupTest.js
+  - reportWebVitals.js
+- .gitignore
+- db.json
+- {} package-lock.json
+- {} package.json
+    README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+**Step 3:** install the axios and react UI kit to use in our project and also install json-server globally.
+         npm i axios mdb-react-ui-kit
+         npm install -g json-server
+         
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Step 4:** go to package.json add below file in script:
+                "server" : "json-server --watch data.json --port 4000"
+     
+**Step 5:** now go to command prompt:
+           - run " cd  our-folder-name" and press enter
+           - run " npm run server"
+  then copy the http request from resources i.e. http://localhost:4000/users and open it in chrome to check json object which store the data in the table.
+           
+   ```        Microsoft Windows [Version 10.0.19044.1766]
+(c) Microsoft Corporation. All rights reserved.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+C:\Users\akash>cd OneDrive\Desktop\React project\interview-task
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> interview-task@0.1.0 server
+> json-server --watch db.json --port 4000
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  \{^_^}/ hi!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Loading db.json
+  Done
 
-### Code Splitting
+  Resources
+  http://localhost:4000/users
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Home
+  http://localhost:4000
 
-### Analyzing the Bundle Size
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+**Step 6:** Now go to the index.js and import mdb css kit
+        - import "mdb-react-ui-kit/dist/css/mdb.min.css";
+   
+    
+**Step 7:** Import react from react to create useffect function.Import axios from axios then create loadUseData function
+        - import axios from 'axios';
+        - import React, { useState, useEffect } from 'react'
+        
+        `` useEffect(() => {
+    loadUsersData();
+  }, []);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  const loadUsersData = async () => {
+    return await axios.get("http://localhost:4000/users")
+      .then((response) => setData(response.data))
+      .catch((err) => console.log(err));
+  };
+  ``
+  
+  
+ **Step 8:** Create the table and iterator operator to create the rows according to given conditions in the container:
+ 
+ ``  <div style={{ marginTop: "25px" }}>
+        <MDBRow>
+          <MDBCol size="12">
+            <MDBTable className='table-bordered'>
+              <MDBTableHead>
+                <tr>
+                  <th scope="col"><span className='spa' >Topic</span><button className='asc' onClick={handleSortasc} value="topic">ACS</button>
+                    <button className='asc' onClick={handleSortdesc} value="topic">DESC</button></th>
+                  <th scope="col"><span className='spa' >Active Members</span><button className='asc' onClick={handleSortasc} value="activeMembers">ASC</button>
+                    <button className='asc' onClick={handleSortdesc} value="activeMembers">DESC</button></th>
+                  <th scope="col"><span className='spa' >Status</span><button className='asc' onClick={handleSortasc} value="status">ASC</button>
+                    <button className='asc' onClick={handleSortdesc} value="status">DESC</button></th>
+                  <th scope="col"><span className='spa' >Upvotes</span><button className='asc' onClick={handleSortasc} value="upvotes">ASC</button>
+                    <button className='asc' onClick={handleSortdesc} value="upvotes">DESC</button></th>
+                </tr>
+              </MDBTableHead>
+              {data.length === 0 ? (
+                <MDBTableBody className="align-center mb-0">
+                  <tr>
+                    <td colSpan={9} className="text-center mb-0">No Data Found</td>
+                  </tr>
+                </MDBTableBody>) : (
+                data.map((item, id) => (
+                  <MDBTableBody key={id}>
+                    <tr>
+                      <td>{item.topic}</td>
+                      <td>{item.activeMembers}</td>
+                      <td>{item.status}</td>
+                      <td>{item.upvotes}</td>
+                    </tr>
 
-### Advanced Configuration
+                  </MDBTableBody>
+                ))
+              )
+              }
+            </MDBTable>
+          </MDBCol>
+        </MDBRow>
+      </div>
+          `` 
+    
+    
+ **Step 9:** Crate the handleSortasc and handleSortdesc function fro sorting operation and use it in button tag to performer the sorting operation after click on the button
+ 
+ ``  const handleSortasc = async (e) => {
+    let value = e.target.value;
+    setSortValue(value);
+    return await axios.get(`http://localhost:4000/users?_sort=${value}&_order=asc`)
+      .then((response) => {
+        setData(response.data);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+      })
+      .catch((err) => console.log(err));
+  };
 
-### Deployment
+  const handleSortdesc = async (e) => {
+    let value = e.target.value;
+    setSortValue(value);
+    return await axios.get(`http://localhost:4000/users?_sort=${value}&_order=desc`)
+      .then((response) => {
+        setData(response.data);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+      })
+      .catch((err) => console.log(err));
+  };
+  
+  ``
+  
+  
+  **Step 10:** Add the searcch fuctionality after creating creating search button in the form tag also add the reset functionality after created the reset button in the form tag.
+  
+  `` const handleReset = () => {
+    loadUsersData();
+  };
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    return await axios.get(`http://localhost:4000/users?q=${value}`)
+      .then((response) => {
+        setData(response.data);
+        setValue("");
+      })
+      .catch((err) => console.log(err));
+  };
+  
+  ``
+  
+  `` <form style={{ margin: "auto", padding: "15px", maxWidth: "1000px", alignContent: "centre", }}
+        className="d-flex input-group w-auto" onSubmit={handleSearch}>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Search"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <button type="submit" className="search">Search</button>
+        <button className="search" onClick={() => handleReset()}>Reset</button>
+      </form>
+      
+      ``
+**Step 11:** Save all the files run the application:      
+      
+         **Step to Run Application:** Run the application using the following command from the root directory of the project:
 
-### `npm run build` fails to minify
+         npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Output:** Now open your browser and go to http://localhost:3000/, you will see the output.
+
+**Note:** If you not able to see table contain in the output then:
+          - copy the http address from command promt open it on chrome 
+          - then you see the contain of the table
+          - And perform the operation as you want.
+
