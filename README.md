@@ -91,15 +91,15 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
         - import axios from 'axios';
         - import React, { useState, useEffect } from 'react'
         
-        `` useEffect(() => {
-    loadUsersData();
-  }, []);
+ ``  useEffect(() => {
+                    loadUsersData();
+                    }, []);
 
-  const loadUsersData = async () => {
-    return await axios.get("http://localhost:4000/users")
-      .then((response) => setData(response.data))
-      .catch((err) => console.log(err));
-  };
+         const loadUsersData = async () => {
+         return await axios.get("http://localhost:4000/users")
+          .then((response) => setData(response.data))
+          .catch((err) => console.log(err));
+         };
   ``
   
   
