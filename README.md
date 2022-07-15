@@ -13,15 +13,15 @@ Basic CSS properties for styling and designing for the web application.
 
 Set up the development environment, install all the required dependencies.
 Use CSS for stylings.
-Create the data.json file in src to store all data.
+Create the data.json file to store all data.
 
 Below is the step by the step implementation of the above approach:
 
 **Step 1:** Create a React application using the following command:
-        npx create-react-app interview-task
+        - npx create-react-app interview-task
 
 **Step 2:** After creating our project folder i.e.interview task, move to it using the following command:
-        cd interview task
+        - cd interview-task
 
 **Project Structure:** It will look like the following:
 
@@ -44,12 +44,12 @@ Below is the step by the step implementation of the above approach:
 
 
 **Step 3:** install the axios and react UI kit to use in our project and also install json-server globally.
-         npm i axios mdb-react-ui-kit
-         npm install -g json-server
+        - npm i axios mdb-react-ui-kit
+        - npm install -g json-server
          
 
 **Step 4:** go to package.json add below file in script:
-                "server" : "json-server --watch data.json --port 4000"
+              - "server" : "json-server --watch data.json --port 4000"
      
 **Step 5:** now go to command prompt:
            - run " cd  our-folder-name" and press enter
@@ -103,7 +103,7 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
   ``
   
   
- **Step 8:** Create the table and iterator operator to create the rows according to given conditions in the container:
+ **Step 8:** Create the table using iterator operator to create the rows according to given conditions:
  
  ``  <div style={{ marginTop: "25px" }}>
         <MDBRow>
@@ -147,7 +147,7 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
           `` 
     
     
- **Step 9:** Crate the handleSortasc and handleSortdesc function fro sorting operation and use it in button tag to performer the sorting operation after click on the button
+ **Step 9:** Crate the handleSortasc and handleSortdesc function for sorting operation and use it in button tag to performer the sorting operation after click on the button
  
  ``  const handleSortasc = async (e) => {
     let value = e.target.value;
@@ -209,12 +209,12 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
       
          **Step to Run Application:** Run the application using the following command from the root directory of the project:
 
-         npm start
+        - npm start
 
 **Output:** Now open your browser and go to http://localhost:3000/, you will see the output.
 
 **Note:** If you not able to see table contain in the output then:
-          - copy the http address from command promt open it on chrome 
+          - copy the http address i.e. http://localhost:4000/users  from command promt open it on chrome 
           - then you see the contain of the table
           - And perform the operation as you want.
 
