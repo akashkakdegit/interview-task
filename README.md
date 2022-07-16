@@ -145,13 +145,15 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
           </MDBCol>
         </MDBRow>
       </div>
-          ```
+         
+  ```
     
     
  **Step 9:** Crate the handleSortasc and handleSortdesc function for sorting operation and use it in button tag to performer the sorting operation after click on the button
  
  ```
- const handleSortasc = async (e) => {
+ 
+   const handleSortasc = async (e) => {
     let value = e.target.value;
     setSortValue(value);
     return await axios.get(`http://localhost:4000/users?_sort=${value}&_order=asc`)
@@ -179,7 +181,8 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
   **Step 10:** Add the searcch fuctionality after creating creating search button in the form tag also add the reset functionality after created the reset button in the form tag.
   
   ```
-  const handleReset = () => {
+   
+   const handleReset = () => {
     loadUsersData();
   };
   const handleSearch = async (e) => {
@@ -195,6 +198,7 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
   ```
   
   ```
+  
   <form style={{ margin: "auto", padding: "15px", maxWidth: "1000px", alignContent: "centre", }}
         className="d-flex input-group w-auto" onSubmit={handleSearch}>
         <input
@@ -209,6 +213,8 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
       </form>
       
       ```
+      
+      
 **Step 11:** Save all the files run the application:      
       
          **Step to Run Application:** Run the application using the following command from the root directory of the project:
