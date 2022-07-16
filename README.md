@@ -1,4 +1,4 @@
-In this project, we will create a searching, sorting in ascending and sorting in descending operation in data contains in coloumn by using ReactJs.
+In this project, we will create a searching, sorting in ascending and sorting in descending operation by using ReactJs.
 
 
 #### Pre-requisites:
