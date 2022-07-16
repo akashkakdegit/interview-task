@@ -210,19 +210,19 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
         <button type="submit" className="search">Search</button>
         <button className="search" onClick={() => handleReset()}>Reset</button>
       </form>
-      
-```
+ ```
       
       
 **Step 11:** Save all the files run the application:      
       
-         **Step to Run Application:** Run the application using the following command from the root directory of the project:
+          **Step to Run Application:**  Run the application using the following command from the root directory of the project:
 
         - npm start
 
 **Output:** Now open your browser and go to http://localhost:3000/, you will see the output.
 
 **Note:** If you not able to see table contain in the output then:
+
           - copy the http address i.e. http://localhost:4000/users  from command promt open it on chrome 
           - then you see the contain of the table
           - And perform the operation as you want.
