@@ -44,7 +44,7 @@ Below is the step by the step implementation of the above approach:
 - db.json
 - {} package-lock.json
 - {} package.json
-    README.md
+- README.md
 
 
 **Step 3:** install the axios and react UI kit to use in our project and also install json-server globally.
