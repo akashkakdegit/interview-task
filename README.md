@@ -58,10 +58,10 @@ Below is the step by the step implementation of the above approach:
               - "server" : "json-server --watch data.json --port 4000"
      
      
-**Step 5:** now go to command prompt:
+**Step 5:** now go to command prompt and run the following command:
 
-           - run " cd  our-folder-name" and press enter
-           - run " npm run server"
+           - cd  "our-folder-name" and press enter
+           - npm run server
            
   then copy the http request from resources i.e. http://localhost:4000/users and open it in chrome to check json object which store the data in the table.
            
@@ -194,9 +194,9 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
   ```
    
    const handleReset = () => {
-    loadUsersData();
-  };
-  const handleSearch = async (e) => {
+             loadUsersData();
+            };
+   const handleSearch = async (e) => {
     e.preventDefault();
     return await axios.get(`http://localhost:4000/users?q=${value}`)
       .then((response) => {
@@ -224,7 +224,7 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
  ```
       
       
-**Step 11:** Save all the files run the application:      
+**Step 11:** Save all the files and run the application:      
       
   **Step to Run Application:**  Run the application using the following command from the root directory of the project:
 
