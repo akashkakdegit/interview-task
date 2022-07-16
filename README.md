@@ -18,10 +18,14 @@ Create the data.json file to store all data.
 Below is the step by the step implementation of the above approach:
 
 **Step 1:** Create a React application using the following command:
+        
         - npx create-react-app interview-task
+        
 
 **Step 2:** After creating our project folder i.e.interview task, move to it using the following command:
+        
         - cd interview-task
+        
 
 **Project Structure:** It will look like the following:
 
@@ -44,16 +48,21 @@ Below is the step by the step implementation of the above approach:
 
 
 **Step 3:** install the axios and react UI kit to use in our project and also install json-server globally.
+       
         - npm i axios mdb-react-ui-kit
         - npm install -g json-server
          
 
 **Step 4:** go to package.json add below file in script:
+
               - "server" : "json-server --watch data.json --port 4000"
      
+     
 **Step 5:** now go to command prompt:
+
            - run " cd  our-folder-name" and press enter
            - run " npm run server"
+           
   then copy the http request from resources i.e. http://localhost:4000/users and open it in chrome to check json object which store the data in the table.
            
    ```        Microsoft Windows [Version 10.0.19044.1766]
@@ -84,10 +93,12 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
 
 
 **Step 6:** Now go to the index.js and import mdb css kit
-        - import "mdb-react-ui-kit/dist/css/mdb.min.css";
+       
+       - import "mdb-react-ui-kit/dist/css/mdb.min.css";
    
     
 **Step 7:** Import react from react to create useffect function.Import axios from axios then create loadUseData function
+       
         - import axios from 'axios';
         - import React, { useState, useEffect } from 'react'
         
@@ -215,11 +226,13 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
       
 **Step 11:** Save all the files run the application:      
       
-          **Step to Run Application:**  Run the application using the following command from the root directory of the project:
+  **Step to Run Application:**  Run the application using the following command from the root directory of the project:
 
         - npm start
+        
 
 **Output:** Now open your browser and go to http://localhost:3000/, you will see the output.
+
 
 **Note:** If you not able to see table contain in the output then:
 
