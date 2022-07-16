@@ -198,7 +198,6 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
   ```
   
   ```
-  
   <form style={{ margin: "auto", padding: "15px", maxWidth: "1000px", alignContent: "centre", }}
         className="d-flex input-group w-auto" onSubmit={handleSearch}>
         <input
@@ -212,7 +211,7 @@ C:\Users\akash\OneDrive\Desktop\React project\interview-task>npm run server
         <button className="search" onClick={() => handleReset()}>Reset</button>
       </form>
       
-      ```
+```
       
       
 **Step 11:** Save all the files run the application:      
